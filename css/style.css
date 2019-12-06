@@ -1,0 +1,17 @@
+body{
+  margin:0;
+}
+
+.container{
+  width: 360px;
+  margin: 0px auto;
+  border: 2px solid gray;
+}
+
+.checked{
+  color: lightslategray;
+  text-decoration: line-through;
+}
+.deleted{
+  display: none;
+}
