@@ -4,7 +4,7 @@ $('ul').on('click','li',function(){
 
 });
 //delete the hole li on click of the X
-$('span').on('click',function(event){
+$('ul').on('click','span',function(event){
   $(this).parent().fadeOut(500,function(){
     $(this).remove();
   });
@@ -16,8 +16,13 @@ $("input[type='text']").on('keypress',function(event){
   if(event.which === 13){
     //Grabbing the text from input
     var todo = $(this).val();
-    $('ul').append('<li>' +"<span>X</span> "+ todo + '</li>');
+    $('ul').append('<li>' +"<span><i class='fa fa-trash'></i></span>"+ todo + '</li>');
     /// clear the text input
     $(this).val("");
   }
+})
+
+//toggle input
+$('#toggle-form').on('click',function(){
+  $("input[type='text']").fadeToggle();
 })
